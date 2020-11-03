@@ -14,33 +14,33 @@ between + and -.
 """
 import tkinter as tk 
 from tkinter import *
-
+import math
 win = tk.Tk()
 #---------------------------
 out = StringVar()
 
 
 def clickFunction():
-    b= str(e1)
-    c= str(e2)
-    b= float(b)
-    c= float(c)
+    y= e1.get()
+    z= e2.get()
+    b= float(y)
+    c= float(z)
     discriminant= (pow(b,2))-(4*1*c)
     x= str(discriminant)
     e3.insert(0, x)
 
 
-
-
-
-
-l1 = Label(win, text="Please enter your 'b' (Top) and your 'c' (Bottom).")
-e1 = Entry(win, width=20)
-e2 = Entry(win, width=20)
+l1 = Label(win, text="Please enter your 'b'")
+e1 = Entry(win, width=5)
+l2 = Label(win, text="And your 'c'")
+e2 = Entry(win, width=5)
 b1 = Button(win, text="Click to find x", command=clickFunction)
 
 l3 = Label(win, text="x=")
-e3= Entry(win, width=80, textvariable=out)
+e3= Entry(win, width=10, textvariable=out)
+
+
+
 
 
 #---------------
@@ -48,6 +48,7 @@ e3= Entry(win, width=80, textvariable=out)
 
 l1.pack()
 e1.pack()
+l2.pack()
 e2.pack()
 b1.pack()
 l3.pack()
